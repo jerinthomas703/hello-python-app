@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hello-python
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hello-python
+  template:
+    metadata:
+      labels:
+        app: hello-python
+    spec:
+      containers:
+      - name: hello-python
+        image: jerinthomas703/hello-python:v1
+        ports:
+        - containerPort: 5000
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "250m"
