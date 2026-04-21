@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: hello-python
-        image: jerinthomas703/hello-python:v1
+        image: jerindocker/hello-python:v1
         ports:
         - containerPort: 5000
         resources:
