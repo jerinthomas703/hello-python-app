@@ -15,6 +15,7 @@ spec:
       containers:
       - name: hello-python
         image: jerindocker/hello-python:v1
+        imagePullPolicy: Always
         ports:
         - containerPort: 5000
         resources:
